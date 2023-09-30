@@ -8,6 +8,7 @@
 </head>
 <body>
 <div class="container">
+    {% if data %}
     <h1>All The Review for {{query}} on Flipkart </h1>
     <table>
         <thead>
@@ -29,17 +30,21 @@
         {% endfor %}
         </tbody>
     </table>
-
-
+    {% else %}
+    <h1>No Data Found For {{query}} on Flipkart </h1>
+    {% endif %}
 </div>
 
 <div class="fixed-buttons">
     <form action="/delete" method="POST">
-        <button type="submit" class="btn">Go Back to Home</button> <!-- Button to delete data -->
+        <button type="submit" class="btn">Go Back to Home</button>
     </form>
+    {% if data %}
     <form action="/download_csv" method="GET">
         <button type="submit" class="btn">Download CSV</button>
     </form>
+    {% endif %}
 </div>
 </body>
+
 </html>
