@@ -1,0 +1,69 @@
+/* Add a bubble gum theme background */
+body {
+    background-color: #FFD6E7;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #FF4C6A;
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #FF4C6A;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #FFD6E7;
+}
+
+tr:hover {
+    background-color: #FFC0DB;
+}
+
+a {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #FF4C6A;
+    font-weight: bold;
+}
+
+button {
+    background-color: #FF4C6A;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #FF3360;
+}
+
+.fixed-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000; /* Ensure it's above other content */

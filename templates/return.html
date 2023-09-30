@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scraped Data</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/return_style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>All The Review for {{query}} on Flipkart </h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Rating</th>
+            <th>Comment Header</th>
+            <th>Comment</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in data %}
+        <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.rating }}</td>
+            <td>{{ item.comment_header }}</td>
+            <td>{{ item.comment }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+</div>
+
+<div class="fixed-buttons">
+    <form action="/delete" method="POST">
+        <button type="submit" class="btn">Go Back to Home</button> <!-- Button to delete data -->
+    </form>
+    <form action="/download_csv" method="GET">
+        <button type="submit" class="btn">Download CSV</button>
+    </form>
+</div>
+</body>
+</html>
